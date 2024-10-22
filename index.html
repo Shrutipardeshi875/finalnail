@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Disease Detection</title>
+</head>
+<body>
+    <h1>Nail Disease Detection</h1>
+    <h2>Make an Appointment</h2>
+    <form action="/appointment" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="date">Appointment Date:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="symptoms">Symptoms:</label>
+        <textarea id="symptoms" name="symptoms" required></textarea><br>
+
+        <label for="medical_history">Medical History:</label>
+        <textarea id="medical_history" name="medical_history"></textarea><br>
+
+        <label for="hemoglobin_count">Hemoglobin Count:</label>
+        <input type="number" id="hemoglobin_count" name="hemoglobin_count" step="0.1" required><br>
+
+        <input type="submit" value="Schedule Appointment">
+    </form>
+    
+    <h2>Train the Model</h2>
+    <form action="/train_model" method="get">
+        <input type="submit" value="Train Model">
+        <a href="{{ url_for('Nail Images/train') }}">Upload Dataset</a>
+
+    </form>
+</body>
+</html>
+
